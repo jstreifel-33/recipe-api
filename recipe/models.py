@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 
 class Recipe(models.Model):
     name = models.CharField(max_length=64)
-    author = models.ForeignKey(get_user_model(), on_delete=CASCADE)
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     servings = models.IntegerField()
     ingredients = models.TextField()
     instructions = models.TextField()
