@@ -2,16 +2,18 @@ version: '3'
 
 services:
 
-  db:
-    image: postgres
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+  # db:
+  #   image: postgres
+  #   environment:
+  #     - POSTGRES_DB=postgres
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
 
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    # command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn --workers 3 --bind 0.0.0.0:8000 recipe_api.wsgi:application
+
     volumes:
       - .:/code
     ports:
