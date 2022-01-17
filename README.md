@@ -14,3 +14,5 @@ App is not deployed to the cloud. Please feel free to fork or clone for local us
 ## Submission
 
 PR: [Working Branch #1](https://github.com/jstreifel-33/recipe-api/pull/1)
+
+JWT PR: [JWT Auth #1](https://github.com/jstreifel-33/recipe-api/pull/2)
